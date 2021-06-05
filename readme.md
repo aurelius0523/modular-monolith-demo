@@ -22,10 +22,16 @@ exchange for lower scalability (as application tends to be more memory intensive
 and starts up slower). The domain boundaries are still respected in the form of
 modules, which doesn't allow direct method invocation*
 
-### Considerations
+## Considerations
 
-**Why not use Spring Events since both module resides in the same application?**
-This
+**Should I use Spring Event or normal HTTP calls when communicating between
+modules?**
+
+While it makes more sense from a performance perspective to use `Spring Event`
+or some form of direct method invocation, do keep in mind that a modular
+monolith could be a _transitory_ pattern. It might be worth considering the
+effort required to retrofit from `Spring Event` to http call or any other
+non-similar methods of communication
 
 ---
 **Given that Book Module and Author Module lives in the same application, why
@@ -36,9 +42,7 @@ important as its abstraction. The idea is that the abstraction can be
 retrofitted when a module in this modular monolith is separated into a
 standalone application.
 
-### Downsides/Limitation
-
----
+## Downsides/Limitation
 
 ##### External dependencies are still declared within a singular `pom.xml` which limits extent of modularity.
 
@@ -46,7 +50,7 @@ Consider using a multi-module maven project instead to address this
 
 ---
 
-##### DTOs from different modules are imported directly
+##### DTOs from different modules are directly imported
 
 This will eventually be an anti-pattern in the event of actual module split into
 microservices as importing a DTOs that belongs to a separate microservice will

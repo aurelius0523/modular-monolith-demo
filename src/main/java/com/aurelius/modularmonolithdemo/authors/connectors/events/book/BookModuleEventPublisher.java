@@ -6,7 +6,7 @@ import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
 
 @Component
-public class AddBookToAuthorEventPublisher {
+public class BookModuleEventPublisher {
     @Autowired
     private ApplicationEventPublisher applicationEventPublisher;
 

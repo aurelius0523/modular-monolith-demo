@@ -1,6 +1,6 @@
 package com.aurelius.modularmonolithdemo.authors.facades;
 
-import com.aurelius.modularmonolithdemo.authors.connectors.events.book.AddBookToAuthorEventPublisher;
+import com.aurelius.modularmonolithdemo.authors.connectors.events.book.BookModuleEventPublisher;
 import com.aurelius.modularmonolithdemo.authors.connectors.feign.book.BookClient;
 import com.aurelius.modularmonolithdemo.authors.dtos.AuthorDto;
 import com.aurelius.modularmonolithdemo.books.dtos.BookDto;
@@ -16,7 +16,7 @@ public class AuthorFacade {
     private BookClient bookClient;
 
     @Autowired
-    AddBookToAuthorEventPublisher addBookToAuthorEventPublisher;
+    BookModuleEventPublisher bookModuleEventPublisher;
 
     public List<AuthorDto> getAuthorList() {
         bookClient.getBookList("123")
@@ -28,7 +28,7 @@ public class AuthorFacade {
     }
 
     public AuthorDto addBookToAuthor() {
-        addBookToAuthorEventPublisher.addBookToAuthor("brandon", "cool book");
+        bookModuleEventPublisher.addBookToAuthor("brandon", "cool book");
         return new AuthorDto();
     }
 }

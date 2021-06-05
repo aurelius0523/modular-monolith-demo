@@ -5,5 +5,5 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableFeignClients
-public class BookClientConfiguration {
+public class BookFeignClientConfig {
 }

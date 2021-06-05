@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
-@FeignClient(name = "book-service", url = "http://localhost:8080", configuration = BookClientConfiguration.class)
+@FeignClient(name = "book-service", url = "http://localhost:8080", configuration = BookFeignClientConfig.class)
 public interface BookClient {
     @GetMapping("/books")
     List<BookDto> getBookList(@RequestParam("authorId") String authorId);
