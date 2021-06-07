@@ -19,11 +19,6 @@ public class AuthorFacade {
     BookModuleEventPublisher bookModuleEventPublisher;
 
     public List<AuthorDto> getAuthorList() {
-        bookClient.getBookList("123")
-                .stream()
-                .map(BookDto::getName)
-                .forEach(System.out::println);
-
         return new ArrayList<>();
     }
 
