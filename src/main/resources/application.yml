@@ -1,9 +1,4 @@
 spring:
-  datasource:
-    driverClassName: org.h2.Driver
-    password: modular
-    url: jdbc:h2:./test
-    username: modular
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
   h2:
