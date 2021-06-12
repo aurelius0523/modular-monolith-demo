@@ -27,33 +27,34 @@ modules, which doesn't allow direct method invocation*
 **Should I use Spring Event or normal HTTP calls when communicating between
 modules?**
 
-While it makes more sense from a performance perspective to use `Spring Event`
-or some form of direct method invocation, do keep in mind that a modular
-monolith could be a _transitory_ pattern. It might be worth considering the
-effort required to retrofit from `Spring Event` to http call or any other
-non-similar methods of communication
-
+Design an abstraction layer that would closely mimic the communication type (
+http/rpc/messaging) that you expect to use when splitting the modules into
+individual microservices.
 ---
+
 **Given that Book Module and Author Module lives in the same application, why
-use HTTP call?**
+use HTTP call between them?**
 
-The communication implementation (REST/grpc/queue/spring-events) is not as
-important as its abstraction. The idea is that the abstraction can be
-retrofitted when a module in this modular monolith is separated into a
-standalone application.
-
-## Downsides/Limitation
-
-##### External dependencies are still declared within a singular `pom.xml` which limits extent of modularity.
-
-Consider using a multi-module maven project instead to address this
-
+The communication method (http/rpc/queue/spring-events) is not as important as
+its abstraction. E.g., if you expect the communication between `author`
+and `book` modules to be synchronous and request/response based, you can simply
+invoke method of `book` module method directly for now. Change it to `http` when
+it is time to move to separate services
 ---
 
-##### DTOs from different modules are directly imported
+**Why not use a multi-module maven project?**
 
-This will eventually be an anti-pattern in the event of actual module split into
-microservices as importing a DTOs that belongs to a separate microservice will
-not work, so it might be worth the effort to consider the separation early on
-
+That is significantly cleaner from a dependency management perspective. I would
+encourage that instead.
 ---
+
+**How to manage dependency between modules**
+
+This particular setup requires a more manual approach to ensure that there's no
+unintended dependency between modules. I would recommend using `multimodule maven`
+approach along with `Java 9 jigsaw` to enforce modularity instead.
+---
+
+## TODO
+1. Turn modules into multi module maven project
+1. Add `module-info` to fine tune dependency
