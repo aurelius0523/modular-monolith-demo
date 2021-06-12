@@ -2,11 +2,11 @@ package com.aurelius.modularmonolithdemo.authors.facades;
 
 import com.aurelius.modularmonolithdemo.authors.connectors.events.book.BookModuleEventPublisher;
 import com.aurelius.modularmonolithdemo.authors.connectors.feign.book.BookClient;
-import com.aurelius.modularmonolithdemo.authors.dtos.AuthorDto;
+import com.aurelius.modularmonolithdemo.commons.dtos.AuthorDto;
 import com.aurelius.modularmonolithdemo.authors.mappers.AuthorMapper;
 import com.aurelius.modularmonolithdemo.authors.repositories.author.AuthorRepository;
 import com.aurelius.modularmonolithdemo.authors.repositories.author.entities.AuthorEntity;
-import com.aurelius.modularmonolithdemo.books.dtos.BookDto;
+import com.aurelius.modularmonolithdemo.commons.dtos.BookDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

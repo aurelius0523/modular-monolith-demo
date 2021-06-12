@@ -1,6 +1,6 @@
 package com.aurelius.modularmonolithdemo.authors.connectors.feign.book;
 
-import com.aurelius.modularmonolithdemo.books.dtos.BookDto;
+import com.aurelius.modularmonolithdemo.commons.dtos.BookDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

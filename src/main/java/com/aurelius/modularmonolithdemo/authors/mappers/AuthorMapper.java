@@ -1,8 +1,8 @@
 package com.aurelius.modularmonolithdemo.authors.mappers;
 
-import com.aurelius.modularmonolithdemo.authors.dtos.AuthorDto;
+import com.aurelius.modularmonolithdemo.commons.dtos.AuthorDto;
 import com.aurelius.modularmonolithdemo.authors.repositories.author.entities.AuthorEntity;
-import com.aurelius.modularmonolithdemo.books.dtos.BookDto;
+import com.aurelius.modularmonolithdemo.commons.dtos.BookDto;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

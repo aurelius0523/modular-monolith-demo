@@ -1,4 +1,4 @@
-package com.aurelius.modularmonolithdemo.books.dtos;
+package com.aurelius.modularmonolithdemo.commons.dtos;
 
 public class BookDto {
     private Long id;

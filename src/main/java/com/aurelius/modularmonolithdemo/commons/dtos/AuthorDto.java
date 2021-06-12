@@ -1,6 +1,4 @@
-package com.aurelius.modularmonolithdemo.authors.dtos;
-
-import com.aurelius.modularmonolithdemo.books.dtos.BookDto;
+package com.aurelius.modularmonolithdemo.commons.dtos;
 
 import java.util.List;
 

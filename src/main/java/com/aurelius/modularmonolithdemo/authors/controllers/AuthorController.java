@@ -1,6 +1,6 @@
 package com.aurelius.modularmonolithdemo.authors.controllers;
 
-import com.aurelius.modularmonolithdemo.authors.dtos.AuthorDto;
+import com.aurelius.modularmonolithdemo.commons.dtos.AuthorDto;
 import com.aurelius.modularmonolithdemo.authors.facades.AuthorFacade;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
