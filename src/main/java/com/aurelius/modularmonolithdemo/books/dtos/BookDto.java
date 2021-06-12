@@ -1,7 +1,27 @@
 package com.aurelius.modularmonolithdemo.books.dtos;
 
 public class BookDto {
-    public String name;
+    private Long id;
+    private String name;
+    private Long authorId;
+
+    public Long getAuthorId() {
+        return authorId;
+    }
+
+    public BookDto setAuthorId(Long authorId) {
+        this.authorId = authorId;
+        return this;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public BookDto setId(Long id) {
+        this.id = id;
+        return this;
+    }
 
     public String getName() {
         return name;

@@ -13,7 +13,9 @@ import java.util.stream.Collectors;
 public class BookMapper {
     public BookDto fromEntity(BookEntity bookEntity) {
         return new BookDto()
-                .setName(bookEntity.getName());
+                .setName(bookEntity.getName())
+                .setId(bookEntity.getId())
+                .setAuthorId(bookEntity.getAuthorId());
     }
 
     public List<BookDto> fromEntities(List<BookEntity> bookEntityList) {

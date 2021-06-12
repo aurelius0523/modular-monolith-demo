@@ -10,7 +10,6 @@ import com.aurelius.modularmonolithdemo.books.dtos.BookDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -30,12 +29,16 @@ public class AuthorFacade {
 
     public List<AuthorDto> getAuthorList() {
         List<AuthorEntity> authorEntityList = authorRepository.findAll();
+
         List<String> authorIdList = authorEntityList.stream()
                 .map(authorEntity -> String.valueOf(authorEntity.getId()))
                 .collect(Collectors.toList());
 
         List<BookDto> bookDtoList = bookClient.getBookList(authorIdList);
-        return authorMapper.fromEntities(authorEntityList);
+
+        List<AuthorDto> authorDtoList = authorMapper.fromEntities(authorEntityList);
+
+        return authorMapper.fromBookEntities(authorDtoList, bookDtoList);
     }
 
 
