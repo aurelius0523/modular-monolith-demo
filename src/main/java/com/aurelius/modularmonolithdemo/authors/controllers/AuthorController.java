@@ -2,11 +2,6 @@ package com.aurelius.modularmonolithdemo.authors.controllers;
 
 import com.aurelius.modularmonolithdemo.authors.dtos.AuthorDto;
 import com.aurelius.modularmonolithdemo.authors.facades.AuthorFacade;
-import com.aurelius.modularmonolithdemo.authors.repositories.author.AuthorRepository;
-import com.aurelius.modularmonolithdemo.authors.repositories.author.entities.AuthorEntity;
-import com.aurelius.modularmonolithdemo.books.respositories.book.BookRepository;
-import com.aurelius.modularmonolithdemo.books.respositories.book.BookRepositoryConfig;
-import com.aurelius.modularmonolithdemo.books.respositories.book.entities.BookEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

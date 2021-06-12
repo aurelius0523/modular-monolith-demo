@@ -1,7 +1,7 @@
 package com.aurelius.modularmonolithdemo.books.mappers;
 
 import com.aurelius.modularmonolithdemo.books.dtos.BookDto;
-import com.aurelius.modularmonolithdemo.books.respositories.book.entities.BookEntity;
+import com.aurelius.modularmonolithdemo.books.repositories.book.entities.BookEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 

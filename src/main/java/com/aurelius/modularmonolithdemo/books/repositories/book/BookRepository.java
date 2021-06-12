@@ -1,6 +1,6 @@
-package com.aurelius.modularmonolithdemo.books.respositories.book;
+package com.aurelius.modularmonolithdemo.books.repositories.book;
 
-import com.aurelius.modularmonolithdemo.books.respositories.book.entities.BookEntity;
+import com.aurelius.modularmonolithdemo.books.repositories.book.entities.BookEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

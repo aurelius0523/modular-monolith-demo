@@ -1,4 +1,4 @@
-package com.aurelius.modularmonolithdemo.books.respositories.book.entities;
+package com.aurelius.modularmonolithdemo.books.repositories.book.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

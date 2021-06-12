@@ -3,7 +3,7 @@ package com.aurelius.modularmonolithdemo.books.facades;
 import com.aurelius.modularmonolithdemo.authors.connectors.events.book.payload.AddBookToAuthorPayload;
 import com.aurelius.modularmonolithdemo.books.dtos.BookDto;
 import com.aurelius.modularmonolithdemo.books.mappers.BookMapper;
-import com.aurelius.modularmonolithdemo.books.respositories.book.BookRepository;
+import com.aurelius.modularmonolithdemo.books.repositories.book.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;

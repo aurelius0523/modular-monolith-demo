@@ -1,16 +1,7 @@
 spring:
-  datasource:
-      username: modular
-      password: modular
-      driverClassName: org.h2.Driver
-  datasource2:
-      username: modular
-      password: modular
-      driverClassName: org.h2.Driver
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
-#  h2:
-#    console:
-#      enabled: true
+    hibernate:
+      ddl-auto: none
   logging:
     level: debug
