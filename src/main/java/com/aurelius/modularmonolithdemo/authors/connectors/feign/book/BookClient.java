@@ -10,5 +10,5 @@ import java.util.List;
 @FeignClient(name = "book-service", url = "http://localhost:8080", configuration = BookFeignClientConfig.class)
 public interface BookClient {
     @GetMapping("/books")
-    List<BookDto> getBookList(@RequestParam("authorId") String authorId);
+    List<BookDto> getBookList(@RequestParam("authorIdList") List<String> authorIdList);
 }

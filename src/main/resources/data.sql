@@ -20,6 +20,8 @@ CREATE TABLE book.book
 INSERT INTO author.author(name)
 values ('Brandon Sanderson');
 
+INSERT INTO author.author(name)
+values ('Robert Kiyosaki');
 
 INSERT INTO book.book(name, author_id)
 values ('The Final Empire', 1);
@@ -29,3 +31,6 @@ values ('The Well of Ascension', 1);
 
 INSERT INTO book.book(name, author_id)
 values ('Hero of Ages', 1);
+
+INSERT INTO book.book(name, author_id)
+values ('Rich Dad Poor Dad', 2);

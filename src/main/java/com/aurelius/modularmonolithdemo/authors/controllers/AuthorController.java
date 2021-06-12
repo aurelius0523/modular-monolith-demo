@@ -21,24 +21,8 @@ public class AuthorController {
     @Autowired
     private AuthorFacade authorFacade;
 
-    @Autowired
-    private AuthorRepository authorRepository;
-
-    @Autowired
-    private BookRepository bookRepository;
-
     @GetMapping
     public List<AuthorDto> getAuthorList() {
-        authorRepository.findAll()
-                .stream()
-                .map(AuthorEntity::getName)
-                .forEach(System.out::println);
-
-        bookRepository.findAll()
-                .stream()
-                .map(BookEntity::getName)
-                .forEach(System.out::println);
-
         return authorFacade.getAuthorList();
     }
 
