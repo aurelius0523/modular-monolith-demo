@@ -30,6 +30,7 @@ modules?**
 Design an abstraction layer that would closely mimic the communication type (
 http/rpc/messaging) that you expect to use when splitting the modules into
 individual microservices.
+
 ---
 
 **Given that Book Module and Author Module lives in the same application, why
@@ -40,12 +41,14 @@ its abstraction. E.g., if you expect the communication between `author`
 and `book` modules to be synchronous and request/response based, you can simply
 invoke method of `book` module method directly for now. Change it to `http` when
 it is time to move to separate services
+
 ---
 
 **Why not use a multi-module maven project?**
 
 That is significantly cleaner from a dependency management perspective. I would
 encourage that instead.
+
 ---
 
 **How to manage dependency between modules**
@@ -53,6 +56,7 @@ encourage that instead.
 This particular setup requires a more manual approach to ensure that there's no
 unintended dependency between modules. I would recommend using `multimodule maven`
 approach along with `Java 9 jigsaw` to enforce modularity instead.
+
 ---
 
 ## TODO
